@@ -1,0 +1,40 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+### BEGIN WebStorm ###
+.idea/.generators
+#.idea/codeStyles
+.idea/dataSources/*
+.idea/dataSources.local.xml
+.idea/dataSources.xml
+.idea/httpRequests
+# .idea/inspectionProfiles: maybe we will remove this later, for now be conservative and ignore to avoid flapping
+.idea/inspectionProfiles
+.idea/runConfigurations
+.idea/scopes
+.idea/workspace.xml
+## These are not ignored for now, may reassess later:
+#.idea/.name
+#.idea/dictionaries
+#.idea/encodings.xml
+#.idea/jsLibraryMappings.xml
+### END WebStorm ###
