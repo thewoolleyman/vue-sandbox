@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <div>
+      <skills-list :skills="skills" />
       <logo />
       <h1 class="title">
         vue-sandbox
@@ -25,11 +26,31 @@
 </template>
 
 <script>
+import SkillsList from '~/components/skills_list'
 import Logo from '~/components/Logo.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    SkillsList
+  },
+  data() {
+    return {
+      skills: [
+        {
+          desc: 'Bow Hunting',
+          id: 'bow-hunting'
+        },
+        {
+          desc: 'Nunchuck',
+          id: 'nunchuck'
+        },
+        {
+          desc: 'Computer Hacking',
+          id: 'computer-hacking'
+        }
+      ]
+    }
   }
 }
 </script>
