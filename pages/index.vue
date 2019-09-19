@@ -25,8 +25,8 @@
   </div>
 </template>
 
-<script>
-import SkillsList from '~/components/skills_list'
+<script lang="ts">
+import SkillsList from '../components/skills_list'
 import Logo from '~/components/Logo.vue'
 
 export default {

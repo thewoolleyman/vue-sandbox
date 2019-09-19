@@ -2,7 +2,7 @@
   <li>{{ skill.desc }}</li>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   props: {
     skill: {

@@ -8,9 +8,11 @@
   </ul>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
+
 import SkillLineItem from './skill_line_item'
-export default {
+export default Vue.extend({
   components: {
     SkillLineItem
   },
@@ -20,7 +22,7 @@ export default {
       required: true
     }
   }
-}
+})
 </script>
 
 <style>
