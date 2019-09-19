@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import SkillsList from '~/components/skills_list'
+import SkillsList from '~/components/SkillsList'
 import Logo from '~/components/Logo.vue'
 
 export default {

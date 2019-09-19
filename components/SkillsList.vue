@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import SkillLineItem from './skill_line_item'
+import SkillLineItem from './SkillLineItem'
 export default {
   components: {
     SkillLineItem
