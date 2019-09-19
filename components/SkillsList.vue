@@ -26,5 +26,6 @@ export default {
 <style>
 .item-list {
   list-style: none;
+  padding-left: unset;
 }
 </style>
