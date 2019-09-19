@@ -8,6 +8,8 @@
 </template>
 
 <script>
+import { getData } from '../api/getData'
+import parseData from '../util/parseData'
 import SkillsList from '~/components/SkillsList'
 
 export default {
@@ -16,20 +18,22 @@ export default {
   },
   data() {
     return {
-      skills: [
-        {
-          desc: 'Bow Hunting',
-          id: 'bow-hunting'
-        },
-        {
-          desc: 'Nunchuck',
-          id: 'nunchuck'
-        },
-        {
-          desc: 'Computer Hacking',
-          id: 'computer-hacking'
-        }
-      ]
+      skills: []
+    }
+  },
+  created() {
+    this.initApp()
+  },
+  methods: {
+    initApp() {
+      getData()
+        .then((response) => {
+          const parsedData = parseData(response.data)
+          this.skills = parsedData.skillsList
+        })
+        .catch((error) => {
+          this.skills = [{ id: 'error', desc: error }]
+        })
     }
   }
 }
