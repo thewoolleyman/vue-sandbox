@@ -11,7 +11,10 @@ module.exports = {
   },
   collectCoverage: true,
   collectCoverageFrom: [
-    '<rootDir>/components/**/*.vue',
-    '<rootDir>/pages/**/*.vue'
+    '<rootDir>/api/**/*',
+    '!<rootDir>/api/dataUrl.js',
+    '<rootDir>/components/**/*',
+    '<rootDir>/pages/**/*',
+    '<rootDir>/util/**/*'
   ]
 }
