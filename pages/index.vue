@@ -32,7 +32,7 @@ export default {
           this.skills = parsedData.skillsList
         })
         .catch((error) => {
-          this.skills = [{ id: 'error', desc: error }]
+          this.skills = [{ id: 'error', desc: error.response.data }]
         })
     }
   }

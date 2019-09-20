@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils'
 import SkillsList from '~/components/SkillsList'
 
 describe('SkillsList', () => {
-  test('is a Vue instance', () => {
+  test('works', () => {
     const wrapper = mount(SkillsList, {
       propsData: { skills: [{ desc: 'skill-desc' }] }
     })
