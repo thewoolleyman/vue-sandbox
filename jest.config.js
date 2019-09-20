@@ -15,6 +15,7 @@ module.exports = {
     '!<rootDir>/api/dataUrl.js',
     '<rootDir>/components/**/*',
     '<rootDir>/pages/**/*',
+    '<rootDir>/store/**/*',
     '<rootDir>/util/**/*'
   ]
 }

@@ -8,33 +8,23 @@
 </template>
 
 <script>
-import { getData } from '../api/getData'
-import parseData from '../util/parseData'
-import SkillsList from '~/components/SkillsList'
+import { mapActions, mapState } from 'vuex'
+import SkillsList from '../components/SkillsList'
+import store from '../store'
 
 export default {
+  store,
   components: {
     SkillsList
   },
-  data() {
-    return {
-      skills: []
-    }
+  computed: {
+    ...mapState(['isLoading', 'skills'])
   },
   created() {
-    this.initApp()
+    this.fetchData()
   },
   methods: {
-    initApp() {
-      getData()
-        .then((response) => {
-          const parsedData = parseData(response.data)
-          this.skills = parsedData.skillsList
-        })
-        .catch((error) => {
-          this.skills = [{ id: 'error', desc: error.response.data }]
-        })
-    }
+    ...mapActions(['fetchData'])
   }
 }
 </script>
